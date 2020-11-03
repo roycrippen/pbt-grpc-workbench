@@ -1,0 +1,34 @@
+{
+    "name": "ts-pbt",
+    "version": "0.0.1",
+    "description": "gRPC service to expose typescript functions",
+    "scripts": {
+        "server": "node -r ts-node/register src/server/index.ts",
+        "protoc": "node -r ts-node/register generate-proto-files.ts",
+        "test:client": "npm run protoc && node -r ts-node/register test/exampleServerTests.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "files": [
+        "client/",
+        "generated/"
+    ],
+    "author": "Crippen",
+    "license": " BSD-3-Clause",
+    "dependencies": {
+        "google-protobuf": "^3.12.1",
+        "grpc": "^1.24.2",
+        "grpc-tools": "^1.8.1",
+        "grpc_tools_node_protoc_ts": "^2.5.11",
+        "request": "^2.88.2"
+    },
+    "devDependencies": {
+        "@types/google-protobuf": "^3.7.2",
+        "@types/node": "^14.0.4",
+        "prettier": "2.0.5",
+        "ts-node": "^8.10.1",
+        "typescript": "^3.9.3"
+    },
+    "prettier": {
+        "printWidth": 120
+    }
+}

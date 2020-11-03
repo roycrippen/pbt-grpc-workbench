@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package proto;
+option java_multiple_files = true;
+
+// Service definitions
+service Example {
+  rpc Ping(Empty) returns(Status);
+  rpc XorCipher(XorCipherRequest) returns(XorCipherResponse);
+  rpc MySqrt(Calc) returns(Calc);
+}
+
+message Empty {}
+
+message Status { string status = 1; }
+
+message XorCipherRequest {
+  string key = 1;
+  string in_str = 2;
+}
+message XorCipherResponse { string out_str = 1; }
+
+message Calc {
+  double value = 1;
+  double epsilon = 2;
+}

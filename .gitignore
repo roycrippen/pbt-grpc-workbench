@@ -1,0 +1,11 @@
+*.log
+.idea/*
+*/.idea/*
+*/.hypothesis/*
+*/target
+*.lock
+__pycache__
+*/venv
+*/.pytest_cache/*
+
+*/node_modules/*
