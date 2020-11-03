@@ -8,12 +8,18 @@ Dependencies:
 
 - [node >= v10.16.0](https://github.com/nvm-sh/nvm) <br><br>
 
+Recommended tools:
+
+- [nvm](https://github.com/nvm-sh/nvm)
+- [bloom](https://github.com/uw-labs/bloomrpc)
+
 ## Quick start
 
 ### Install dependencies
 ```bash
 $ npm install
 ```
+might need to: export NODE_TLS_REJECT_UNAUTHORIZED=0 
 
 ### Start server
 ```bash
